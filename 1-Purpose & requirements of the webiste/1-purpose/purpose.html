@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Purpose — AMC IT Asset Management</title>
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #9aa4b2;
+            --accent: #7c3aed;
+            --glass: rgba(255, 255, 255, 0.04);
+            --maxw: 1000px;
+            --radius: 14px;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0
+        }
+
+        body {
+            background: linear-gradient(180deg, #071026 0%, #081426 60%), var(--bg);
+            color: #e6eef8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 36px auto;
+            padding: 28px
+        }
+
+        header {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(20px, 3.6vw, 32px);
+            letter-spacing: 0.2px
+        }
+
+        header p {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin-top: 20px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+        }
+
+        ol.main {
+            counter-reset: step;
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        ol.main>li {
+            padding: 18px;
+            margin-bottom: 14px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            /* display: flex; */
+            flex-direction: column;
+
+            transition: all .5s ;
+        }
+
+        ol.main>li:hover{
+            transform: scale(1.02);
+            background-color: rgb(255, 255, 255,.2);
+            backdrop-filter: blur(10px);
+
+        }
+
+        ol.main>li::before {
+            counter-increment: step;
+            content: counter(step);
+            display: inline-grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 999px;
+            margin-right: 14px;
+            font-weight: 700;
+            color: #0b1020;
+            background: linear-gradient(180deg, #fff, #f2f2f2);
+            float: left;
+        }
+
+        .title {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .title h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #f8fafc
+        }
+
+        .content {
+            margin-top: 8px;
+            color: var(--muted);
+            white-space: pre-wrap
+        }
+
+        /* subpoints styling (a,b,c) */
+        .subpoints {
+            margin-top: 10px;
+            padding-left: 18px
+        }
+
+        .subpoints p {
+            margin: 6px 0
+        }
+
+        /* right column: quick actions */
+        .aside {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .chip {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        footer {
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+.imageCont{
+    width: 100%;
+    height:300px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        .img{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            
+        }
+
+        .img:hover{
+            transform: scale(1.05);
+        }
+
+        /* responsive */
+        @media (min-width:880px) {
+            header {
+                justify-content: space-between
+            }
+
+            .wrap {
+                display: flex;
+                gap: 20px
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Web site building Stage-1</h1>
+                <h2>Purpose of the Website</h2>
+                <p>Centralized platform for AMC IT asset management — purpose details captured below (unchanged).</p>
+            </div>
+            <div style="text-align:right">
+                <p class="chip">Project Step: 1 — Purpose Understanding</p>
+                <p class="chip">Use this as the canonical purpose document</p>
+            </div>
+        </header>
+
+        <section class="card">
+            <ol class="main">
+                <li>
+                    <div class="title">
+                        <h3>1. To provide a centralized platform for managing all IT assets (PCs, printers, switches,
+                            cables, etc.) covered under the AMC.</h3>
+                    </div>
+                    <div class="content">
+                        a. Details like items serial number, make model, warranty , department of control all these
+                        details will be mentioned in one place .
+
+                        b. Accessing & maintain the items details will easy.
+
+                        c. Identifying items for BR will become easy
+                    </div>
+                    <div class="imageCont">
+                        <img class="img" src="./1.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>2. To streamline the complaint process, allowing users to raise issues online and track
+                            their resolution.</h3>
+                    </div>
+                    <div class="content">
+                        a. The users will be able to register complaints in the items through online.
+
+                        b. Can able to track the progress of the items
+
+                        c. Have accountability that what is the status of the item an
+                    </div>
+                     <div class="imageCont">
+                        <img class="img" src="./2.png" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>3. To assign and monitor work of AMC staff, ensuring accountability and transparency.</h3>
+                    </div>
+                    <div class="content">
+                        a. Amc staffs daily complaints attending will be registered
+
+                        b. Their progress for a complaint will be tracked
+
+                        c. Specific work can be assigned to a specific person
+                    </div>
+                    <div class="imageCont">
+                        <img class="img" src="./3.png" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>4. To maintain a comprehensive database of all network items for easy screening, auditing,
+                            and lifecycle tracking.</h3>
+                    </div>
+                    <div class="content">
+                        a. Thought digital database screening & managing items will become streamlined
+
+                        b. Auditing processes for the PC will become more efficient.
+                    </div>
+                    <div class="imageCont">
+                        <img class="img" src="./4.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>5. To act as a knowledge-sharing platform, providing IT manuals, guidelines, and updates to
+                            both users and AMC staff.</h3>
+                    </div>
+                    <div class="content">&nbsp;</div>
+                    <div class="imageCont">
+                        <img class="img" src="./5.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>6. To host a repository of drivers and software related to AMC operations for quick and
+                            reliable access.</h3>
+                    </div>
+                    <div class="content">&nbsp;</div>
+                    <div class="imageCont">
+                        <img class="img" src="./6.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>7. To enable real-time updates and notifications about network status, AMC activities, and
+                            technical updates.</h3>
+                    </div>
+                    <div class="content">&nbsp;</div>
+                    <div class="imageCont">
+                        <img class="img" src="./7.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>8. To provide reports and progress tracking for managers, users, and administrators to
+                            ensure SLA compliance and performance monitoring. To improve accountability and efficiency
+                            by capturing daily activities, asset usage, and AMC staff performance.</h3>
+                    </div>
+                    <div class="content">&nbsp;</div>
+                    <div class="imageCont">
+                        <img class="img" src="./8.jpg" alt="">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="title">
+                        <h3>9. Advanced - optional feature To monitor and track network devices (like switches) for
+                            uptime and connectivity, reducing downtime and enabling proactive maintenance.</h3>
+                    </div>
+                    <div class="content">&nbsp;</div>
+                    <div class="imageCont">
+                        <img class="img" src="./9.jpg" alt="">
+                    </div>
+                </li>
+            </ol>
+
+            <!-- <footer>
+                <div style="display:flex;gap:12px;flex-wrap:wrap">
+                    <span class="chip">Author: Project Team</span>
+                    <span class="chip">Status: Draft (Purpose step)</span>
+                    <span class="chip">Next: Architecture planning</span>
+                </div>
+            </footer> -->
+        </section>
+    </div>
+</body>
+
+</html>
